@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 产品分析能力 | 数据科学能力体系</title>
+  <meta name="description" content="T这是一本讲数据科学的书籍" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 产品分析能力 | 数据科学能力体系" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="T这是一本讲数据科学的书籍" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 产品分析能力 | 数据科学能力体系" />
+  
+  <meta name="twitter:description" content="T这是一本讲数据科学的书籍" />
+  
+
+<meta name="author" content="米霖" />
+
+
+<meta name="date" content="2024-11-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="关于人工智能中的系统性思维.html"/>
+<link rel="next" href="评估产品.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 基本知识体系</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#概率论与统计"><i class="fa fa-check"></i><b>1.1</b> 概率论与统计</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#概率分布从离散到连续"><i class="fa fa-check"></i><b>1.1.1</b> <strong>概率分布：从离散到连续</strong></a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#掌握概率分布的要点"><i class="fa fa-check"></i><b>1.1.2</b> <strong>掌握概率分布的要点</strong></a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#假设检验验证模型的核心工具"><i class="fa fa-check"></i><b>1.1.3</b> 假设检验：验证模型的核心工具</a></li>
+<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#贝叶斯统计与因果推论复杂问题的解决之道"><i class="fa fa-check"></i><b>1.1.4</b> 贝叶斯统计与因果推论：复杂问题的解决之道</a></li>
+<li class="chapter" data-level="1.1.5" data-path="index.html"><a href="index.html#贝叶斯统计"><i class="fa fa-check"></i><b>1.1.5</b> <strong>贝叶斯统计</strong></a></li>
+<li class="chapter" data-level="1.1.6" data-path="index.html"><a href="index.html#因果推论"><i class="fa fa-check"></i><b>1.1.6</b> <strong>因果推论</strong></a></li>
+<li class="chapter" data-level="1.1.7" data-path="index.html"><a href="index.html#总结概率与假设检验的价值"><i class="fa fa-check"></i><b>1.1.7</b> <strong>总结：概率与假设检验的价值</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#统计机器学习"><i class="fa fa-check"></i><b>1.2</b> 统计机器学习</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#监督学习与无监督学习核心思路与模型解析"><i class="fa fa-check"></i><b>1.2.1</b> 监督学习与无监督学习：核心思路与模型解析</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#什么是监督学习与无监督学习"><i class="fa fa-check"></i><b>1.2.2</b> <strong>什么是监督学习与无监督学习？</strong></a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#机器学习的三步套路"><i class="fa fa-check"></i><b>1.2.3</b> <strong>机器学习的“三步套路”</strong></a></li>
+<li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#监督学习的核心模型"><i class="fa fa-check"></i><b>1.2.4</b> <strong>监督学习的核心模型</strong></a></li>
+<li class="chapter" data-level="1.2.5" data-path="index.html"><a href="index.html#无监督学习的核心任务"><i class="fa fa-check"></i><b>1.2.5</b> <strong>无监督学习的核心任务</strong></a></li>
+<li class="chapter" data-level="1.2.6" data-path="index.html"><a href="index.html#关键总结"><i class="fa fa-check"></i><b>1.2.6</b> <strong>关键总结</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html"><i class="fa fa-check"></i><b>2</b> 关于人工智能中的“系统性”思维</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#理解管道pipeline"><i class="fa fa-check"></i><b>2.1</b> ** 理解管道（Pipeline）**</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#管道的关键特性"><i class="fa fa-check"></i><b>2.1.1</b> <strong>管道的关键特性</strong></a></li>
+<li class="chapter" data-level="2.1.2" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#从静态到动态管道带来的变化"><i class="fa fa-check"></i><b>2.1.2</b> <strong>从静态到动态：管道带来的变化</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#理解线上与线下的区别"><i class="fa fa-check"></i><b>2.2</b> ** 理解线上与线下的区别**</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#什么是线上"><i class="fa fa-check"></i><b>2.2.1</b> <strong>什么是线上？</strong></a></li>
+<li class="chapter" data-level="2.2.2" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#什么是线下"><i class="fa fa-check"></i><b>2.2.2</b> <strong>什么是线下？</strong></a></li>
+<li class="chapter" data-level="2.2.3" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#线上与线下的分割"><i class="fa fa-check"></i><b>2.2.3</b> <strong>线上与线下的分割</strong></a></li>
+<li class="chapter" data-level="2.2.4" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#案例垃圾邮件检测系统"><i class="fa fa-check"></i><b>2.2.4</b> <strong>案例：垃圾邮件检测系统</strong></a></li>
+<li class="chapter" data-level="2.2.5" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#线上与线下的动态关系"><i class="fa fa-check"></i><b>2.2.5</b> <strong>线上与线下的动态关系</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#系统性思维的意义"><i class="fa fa-check"></i><b>2.3</b> ** 系统性思维的意义**</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#常见误区"><i class="fa fa-check"></i><b>2.3.1</b> <strong>常见误区</strong></a></li>
+<li class="chapter" data-level="2.3.2" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#建议"><i class="fa fa-check"></i><b>2.3.2</b> <strong>建议</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="关于人工智能中的系统性思维.html"><a href="关于人工智能中的系统性思维.html#总结"><i class="fa fa-check"></i><b>2.4</b> <strong>总结</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="产品分析能力.html"><a href="产品分析能力.html"><i class="fa fa-check"></i><b>3</b> 产品分析能力</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="产品分析能力.html"><a href="产品分析能力.html#人工智能工程师和数据科学家的核心工作解析"><i class="fa fa-check"></i><b>3.1</b> 人工智能工程师和数据科学家的核心工作解析</a></li>
+<li class="chapter" data-level="3.2" data-path="产品分析能力.html"><a href="产品分析能力.html#产品需求的庖丁解牛"><i class="fa fa-check"></i><b>3.2</b> <strong>产品需求的“庖丁解牛”</strong></a></li>
+<li class="chapter" data-level="3.3" data-path="产品分析能力.html"><a href="产品分析能力.html#数据驱动产品发展的基础"><i class="fa fa-check"></i><b>3.3</b> <strong>数据驱动：产品发展的基础</strong></a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="产品分析能力.html"><a href="产品分析能力.html#数据的重要性"><i class="fa fa-check"></i><b>3.3.1</b> <strong>“数据”的重要性</strong></a></li>
+<li class="chapter" data-level="3.3.2" data-path="产品分析能力.html"><a href="产品分析能力.html#驱动的关键"><i class="fa fa-check"></i><b>3.3.2</b> <strong>“驱动”的关键</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="产品分析能力.html"><a href="产品分析能力.html#智能决策从拍板到算法的跃迁"><i class="fa fa-check"></i><b>3.4</b> <strong>智能决策：从“拍板”到“算法”的跃迁</strong></a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="产品分析能力.html"><a href="产品分析能力.html#智能决策的意义"><i class="fa fa-check"></i><b>3.4.1</b> <strong>智能决策的意义</strong></a></li>
+<li class="chapter" data-level="3.4.2" data-path="产品分析能力.html"><a href="产品分析能力.html#智能决策的应用场景"><i class="fa fa-check"></i><b>3.4.2</b> <strong>智能决策的应用场景</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="产品分析能力.html"><a href="产品分析能力.html#案例分析从垃圾邮件检测到产品智能化"><i class="fa fa-check"></i><b>3.5</b> <strong>案例分析：从垃圾邮件检测到产品智能化</strong></a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="产品分析能力.html"><a href="产品分析能力.html#线下计算"><i class="fa fa-check"></i><b>3.5.1</b> <strong>线下计算</strong></a></li>
+<li class="chapter" data-level="3.5.2" data-path="产品分析能力.html"><a href="产品分析能力.html#线上决策"><i class="fa fa-check"></i><b>3.5.2</b> <strong>线上决策</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="产品分析能力.html"><a href="产品分析能力.html#总结人工智能工程师与数据科学家的高阶能力"><i class="fa fa-check"></i><b>3.6</b> <strong>总结：人工智能工程师与数据科学家的高阶能力</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="评估产品.html"><a href="评估产品.html"><i class="fa fa-check"></i><b>4</b> 评估产品</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="评估产品.html"><a href="评估产品.html#建立评估体系驱动产品迭代"><i class="fa fa-check"></i><b>4.1</b> 建立评估体系，驱动产品迭代</a></li>
+<li class="chapter" data-level="4.2" data-path="评估产品.html"><a href="评估产品.html#经济收益评估的最终目标"><i class="fa fa-check"></i><b>4.2</b> <strong>经济收益：评估的最终目标</strong></a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="评估产品.html"><a href="评估产品.html#经济收益指标的局限性"><i class="fa fa-check"></i><b>4.2.1</b> <strong>经济收益指标的局限性</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="评估产品.html"><a href="评估产品.html#层次化评估体系"><i class="fa fa-check"></i><b>4.3</b> <strong>层次化评估体系</strong></a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="评估产品.html"><a href="评估产品.html#模块级别评估"><i class="fa fa-check"></i><b>4.3.1</b> ** 模块级别评估**</a></li>
+<li class="chapter" data-level="4.3.2" data-path="评估产品.html"><a href="评估产品.html#页面级别评估"><i class="fa fa-check"></i><b>4.3.2</b> ** 页面级别评估**</a></li>
+<li class="chapter" data-level="4.3.3" data-path="评估产品.html"><a href="评估产品.html#会话级别评估"><i class="fa fa-check"></i><b>4.3.3</b> ** 会话级别评估**</a></li>
+<li class="chapter" data-level="4.3.4" data-path="评估产品.html"><a href="评估产品.html#跨会话评估"><i class="fa fa-check"></i><b>4.3.4</b> ** 跨会话评估**</a></li>
+<li class="chapter" data-level="4.3.5" data-path="评估产品.html"><a href="评估产品.html#长期指标"><i class="fa fa-check"></i><b>4.3.5</b> ** 长期指标**</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="评估产品.html"><a href="评估产品.html#敏感指标与长期指标的平衡"><i class="fa fa-check"></i><b>4.4</b> <strong>敏感指标与长期指标的平衡</strong></a></li>
+<li class="chapter" data-level="4.5" data-path="评估产品.html"><a href="评估产品.html#小结"><i class="fa fa-check"></i><b>4.5</b> <strong>小结</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html"><i class="fa fa-check"></i><b>5</b> 系统提升产品性能</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html#系统性优化产品的长期目标"><i class="fa fa-check"></i><b>5.1</b> 系统性优化产品的长期目标</a></li>
+<li class="chapter" data-level="5.2" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html#优化长期目标"><i class="fa fa-check"></i><b>5.2</b> <strong>优化长期目标</strong></a></li>
+<li class="chapter" data-level="5.3" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html#五层指标体系的回顾"><i class="fa fa-check"></i><b>5.3</b> <strong>五层指标体系的回顾</strong></a></li>
+<li class="chapter" data-level="5.4" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html#跨层级的优化挑战"><i class="fa fa-check"></i><b>5.4</b> <strong>跨层级的优化挑战</strong></a></li>
+<li class="chapter" data-level="5.5" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html#建立层级之间的联系"><i class="fa fa-check"></i><b>5.5</b> <strong>建立层级之间的联系</strong></a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html#示例优化视频推荐系统"><i class="fa fa-check"></i><b>5.5.1</b> <strong>示例：优化视频推荐系统</strong></a></li>
+<li class="chapter" data-level="5.5.2" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html#发现新的优化路径"><i class="fa fa-check"></i><b>5.5.2</b> <strong>发现新的优化路径</strong></a></li>
+<li class="chapter" data-level="5.5.3" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html#多层级协同优化"><i class="fa fa-check"></i><b>5.5.3</b> <strong>多层级协同优化</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html#指标筛选与优化目标的动态调整"><i class="fa fa-check"></i><b>5.6</b> <strong>指标筛选与优化目标的动态调整</strong></a></li>
+<li class="chapter" data-level="5.7" data-path="系统提升产品性能.html"><a href="系统提升产品性能.html#小结-1"><i class="fa fa-check"></i><b>5.7</b> <strong>小结</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="如何衡量数据科学家的工作.html"><a href="如何衡量数据科学家的工作.html"><i class="fa fa-check"></i><b>6</b> 如何衡量数据科学家的工作</a></li>
+<li class="chapter" data-level="7" data-path="数据科学面试.html"><a href="数据科学面试.html"><i class="fa fa-check"></i><b>7</b> 数据科学面试</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="数据科学面试.html"><a href="数据科学面试.html#数据科学团队的简历筛选与电话面试策略"><i class="fa fa-check"></i><b>7.1</b> 数据科学团队的简历筛选与电话面试策略</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="数据科学面试.html"><a href="数据科学面试.html#简历筛选"><i class="fa fa-check"></i><b>7.1.1</b> <strong>简历筛选</strong></a></li>
+<li class="chapter" data-level="7.1.2" data-path="数据科学面试.html"><a href="数据科学面试.html#电话面试"><i class="fa fa-check"></i><b>7.1.2</b> <strong>电话面试</strong></a></li>
+<li class="chapter" data-level="7.1.3" data-path="数据科学面试.html"><a href="数据科学面试.html#小结-2"><i class="fa fa-check"></i><b>7.1.3</b> <strong>小结</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="数据科学与产品.html"><a href="数据科学与产品.html"><i class="fa fa-check"></i><b>8</b> 数据科学与产品</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="数据科学与产品.html"><a href="数据科学与产品.html#数据科学家与产品团队如何建立有效合作关系"><i class="fa fa-check"></i><b>8.1</b> 数据科学家与产品团队：如何建立有效合作关系？</a></li>
+<li class="chapter" data-level="8.2" data-path="数据科学与产品.html"><a href="数据科学与产品.html#明确数据科学的定位人工智能是奢侈品"><i class="fa fa-check"></i><b>8.2</b> ** 明确数据科学的定位：人工智能是“奢侈品”**</a></li>
+<li class="chapter" data-level="8.3" data-path="数据科学与产品.html"><a href="数据科学与产品.html#将产品视为有机整体"><i class="fa fa-check"></i><b>8.3</b> ** 将产品视为有机整体**</a></li>
+<li class="chapter" data-level="8.4" data-path="数据科学与产品.html"><a href="数据科学与产品.html#利用数据科学赋能产品团队"><i class="fa fa-check"></i><b>8.4</b> ** 利用数据科学赋能产品团队**</a></li>
+<li class="chapter" data-level="8.5" data-path="数据科学与产品.html"><a href="数据科学与产品.html#构建透明的沟通机制"><i class="fa fa-check"></i><b>8.5</b> ** 构建透明的沟通机制**</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="数据科学家能力体系.html"><a href="数据科学家能力体系.html"><i class="fa fa-check"></i><b>9</b> 数据科学家能力体系</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="数据科学家能力体系.html"><a href="数据科学家能力体系.html#数据科学家应聘的硬实力"><i class="fa fa-check"></i><b>9.1</b> 数据科学家应聘的“硬”实力</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="数据科学家能力体系.html"><a href="数据科学家能力体系.html#机器学习的基础概念与理论"><i class="fa fa-check"></i><b>9.1.1</b> 机器学习的基础概念与理论</a></li>
+<li class="chapter" data-level="9.1.2" data-path="数据科学家能力体系.html"><a href="数据科学家能力体系.html#统计学习的核心知识"><i class="fa fa-check"></i><b>9.1.2</b> 统计学习的核心知识</a></li>
+<li class="chapter" data-level="9.1.3" data-path="数据科学家能力体系.html"><a href="数据科学家能力体系.html#系统开发能力"><i class="fa fa-check"></i><b>9.1.3</b> 系统开发能力</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="数据科学家能力体系.html"><a href="数据科学家能力体系.html#数据科学家应聘的软实力"><i class="fa fa-check"></i><b>9.2</b> 数据科学家应聘的“软”实力</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="数据科学家能力体系.html"><a href="数据科学家能力体系.html#业务场景与机器学习的翻译能力"><i class="fa fa-check"></i><b>9.2.1</b> <strong>业务场景与机器学习的“翻译”能力</strong></a></li>
+<li class="chapter" data-level="9.2.2" data-path="数据科学家能力体系.html"><a href="数据科学家能力体系.html#沟通与表达能力"><i class="fa fa-check"></i><b>9.2.2</b> <strong>沟通与表达能力</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="数据科学家能力体系.html"><a href="数据科学家能力体系.html#总结-1"><i class="fa fa-check"></i><b>9.3</b> 总结</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="如何选择产品和项目.html"><a href="如何选择产品和项目.html"><i class="fa fa-check"></i><b>10</b> 如何选择产品和项目</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="如何选择产品和项目.html"><a href="如何选择产品和项目.html#如何选择合作产品"><i class="fa fa-check"></i><b>10.1</b> 如何选择合作产品</a></li>
+<li class="chapter" data-level="10.2" data-path="如何选择产品和项目.html"><a href="如何选择产品和项目.html#什么样的产品需要谨慎合作"><i class="fa fa-check"></i><b>10.2</b> 什么样的产品需要谨慎合作？</a></li>
+<li class="chapter" data-level="10.3" data-path="如何选择产品和项目.html"><a href="如何选择产品和项目.html#值得合作的产品特征"><i class="fa fa-check"></i><b>10.3</b> 值得合作的产品特征</a></li>
+<li class="chapter" data-level="10.4" data-path="如何选择产品和项目.html"><a href="如何选择产品和项目.html#如何选择具体的项目"><i class="fa fa-check"></i><b>10.4</b> 如何选择具体的项目？</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="如何选择产品和项目.html"><a href="如何选择产品和项目.html#项目类型的四象限分类"><i class="fa fa-check"></i><b>10.4.1</b> 项目类型的四象限分类</a></li>
+<li class="chapter" data-level="10.4.2" data-path="如何选择产品和项目.html"><a href="如何选择产品和项目.html#项目选择的实践经验"><i class="fa fa-check"></i><b>10.4.2</b> 项目选择的实践经验</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="如何选择产品和项目.html"><a href="如何选择产品和项目.html#总结-2"><i class="fa fa-check"></i><b>10.5</b> 总结</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html"><i class="fa fa-check"></i><b>11</b> 数据科学职场规划</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#数据科学家的垂直发展"><i class="fa fa-check"></i><b>11.1</b> 数据科学家的“垂直发展”</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#初级数据科学家"><i class="fa fa-check"></i><b>11.1.1</b> 初级数据科学家</a></li>
+<li class="chapter" data-level="11.1.2" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#中级数据科学家"><i class="fa fa-check"></i><b>11.1.2</b> 中级数据科学家</a></li>
+<li class="chapter" data-level="11.1.3" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#高级数据科学家"><i class="fa fa-check"></i><b>11.1.3</b> 高级数据科学家</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#数据科学家的升级发展"><i class="fa fa-check"></i><b>11.2</b> 数据科学家的“升级发展”</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#数据科学家转向管理的优势"><i class="fa fa-check"></i><b>11.2.1</b> 数据科学家转向管理的优势</a></li>
+<li class="chapter" data-level="11.2.2" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#数据科学家的管理挑战"><i class="fa fa-check"></i><b>11.2.2</b> 数据科学家的管理挑战</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#数据科学家的跨界发展"><i class="fa fa-check"></i><b>11.3</b> 数据科学家的“跨界发展”</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#转向工程或数据分析团队"><i class="fa fa-check"></i><b>11.3.1</b> 转向工程或数据分析团队</a></li>
+<li class="chapter" data-level="11.3.2" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#转型为产品经理"><i class="fa fa-check"></i><b>11.3.2</b> 转型为产品经理</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="数据科学职场规划.html"><a href="数据科学职场规划.html#总结-3"><i class="fa fa-check"></i><b>11.4</b> 总结</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html"><i class="fa fa-check"></i><b>12</b> 数据科学常见套路</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#搜索套路"><i class="fa fa-check"></i><b>12.1</b> 搜索套路</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#高频与长尾关键词的优化"><i class="fa fa-check"></i><b>12.1.1</b> 高频与长尾关键词的优化</a></li>
+<li class="chapter" data-level="12.1.2" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#搜索模型的三大台阶"><i class="fa fa-check"></i><b>12.1.2</b> 搜索模型的三大台阶</a></li>
+<li class="chapter" data-level="12.1.3" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#总结-4"><i class="fa fa-check"></i><b>12.1.3</b> 总结</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#推荐套路推荐系统的多轮打分架构"><i class="fa fa-check"></i><b>12.2</b> 推荐套路:推荐系统的多轮打分架构</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#从搜索到推荐的类比"><i class="fa fa-check"></i><b>12.2.1</b> 从搜索到推荐的类比</a></li>
+<li class="chapter" data-level="12.2.2" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#高频用户与低频用户的推荐策略"><i class="fa fa-check"></i><b>12.2.2</b> 高频用户与低频用户的推荐策略</a></li>
+<li class="chapter" data-level="12.2.3" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#批量计算与实时推荐"><i class="fa fa-check"></i><b>12.2.3</b> 批量计算与实时推荐</a></li>
+<li class="chapter" data-level="12.2.4" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#总结-5"><i class="fa fa-check"></i><b>12.2.4</b> 总结</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#广告套路依托搜索系统的扩展"><i class="fa fa-check"></i><b>12.3</b> 广告套路：依托搜索系统的扩展</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#展示广告借力推荐系统的优化"><i class="fa fa-check"></i><b>12.3.1</b> 展示广告：借力推荐系统的优化</a></li>
+<li class="chapter" data-level="12.3.2" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#索引的动态更新"><i class="fa fa-check"></i><b>12.3.2</b> 索引的动态更新</a></li>
+<li class="chapter" data-level="12.3.3" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#层次建模的思路"><i class="fa fa-check"></i><b>12.3.3</b> 层次建模的思路</a></li>
+<li class="chapter" data-level="12.3.4" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#具体能力"><i class="fa fa-check"></i><b>12.3.4</b> 具体能力</a></li>
+<li class="chapter" data-level="12.3.5" data-path="数据科学常见套路.html"><a href="数据科学常见套路.html#泛化能力"><i class="fa fa-check"></i><b>12.3.5</b> 泛化能力</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/liamamilin" target="blank">P统计学课能力体系</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">数据科学能力体系</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="产品分析能力" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> 产品分析能力<a href="产品分析能力.html#产品分析能力" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="人工智能工程师和数据科学家的核心工作解析" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> 人工智能工程师和数据科学家的核心工作解析<a href="产品分析能力.html#人工智能工程师和数据科学家的核心工作解析" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>人工智能工程师和数据科学家的主要工作是什么？很多人直观地认为，他们的核心任务是利用复杂的机器学习模型和算法解决产品中的技术难题。这样的认知“部分正确”但并不全面。没错，机器学习模型和算法确实是人工智能技术落地的关键，但如果将工作仅仅归结于此，就忽视了人工智能工程师和数据科学家更广泛的职责和影响力。</p>
+<p>要真正提出优秀的人工智能解决方案，仅掌握算法和建模是不够的。理解产品、分析需求是不可或缺的能力。从高层次来看，这包括以下几个问题：产品当前面临的难题是什么？这些问题中哪些可以通过人工智能技术解决？人工智能能为产品创造的核心价值是什么？</p>
+<p>今天，我们从人工智能工程师和数据科学家的视角，探讨如何系统地提升产品分析能力，并深入理解产品需求。</p>
+<hr />
+</div>
+<div id="产品需求的庖丁解牛" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> <strong>产品需求的“庖丁解牛”</strong><a href="产品分析能力.html#产品需求的庖丁解牛" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>数据驱动型产品是一个复杂的综合体，融合了多种元素：数据、人工智能技术、人机交互、商业规则、心理学，甚至设计美学。在如此多维的产品环境中，找到人工智能技术的合适位置、明确技术的角色和边界，是产品成功的关键。</p>
+<p>我们首先需要回答一个核心问题：<strong>人工智能技术究竟能为产品带来什么？</strong></p>
+<p>很多人可能下意识地认为，人工智能的作用在于解决产品的“算法难题”。然而，人工智能技术的核心价值不仅在于提供算法，还在于为产品注入一种<strong>数据驱动的决策能力</strong>。这种能力可以有效地降低决策的不确定性，加速产品迭代和优化。</p>
+<hr />
+</div>
+<div id="数据驱动产品发展的基础" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> <strong>数据驱动：产品发展的基础</strong><a href="产品分析能力.html#数据驱动产品发展的基础" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="数据的重要性" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> <strong>“数据”的重要性</strong><a href="产品分析能力.html#数据的重要性" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>一个优秀的人工智能产品，首先必须具备“数据意识”和“数据机制”。这意味着产品需要：</p>
+<ol style="list-style-type: decimal">
+<li>有明确的数据采集策略；</li>
+<li>构建完整的数据管道；</li>
+<li>拥有可靠的数据质量检测系统。</li>
+</ol>
+<p>没有流畅的数据链条，就无法为人工智能技术提供支撑。事实上，很多团队和产品无法充分利用人工智能技术，核心问题常常出在数据链条的构建和维护上。</p>
+</div>
+<div id="驱动的关键" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> <strong>“驱动”的关键</strong><a href="产品分析能力.html#驱动的关键" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>仅有数据并不足够。产品团队还需要意识到：<strong>数据不仅是记录，更是驱动产品进化的燃料</strong>。这就要求团队具备数据驱动的思维方式，包括：</p>
+<ul>
+<li>面对问题时，优先从数据中寻找线索；</li>
+<li>通过数据分析加深对产品的理解；</li>
+<li>利用数据优化产品设计、市场策略、技术方案等。</li>
+</ul>
+<p>这种思维方式的普及不仅需要技术支持，更需要团队文化的塑造和引导。</p>
+<hr />
+</div>
+</div>
+<div id="智能决策从拍板到算法的跃迁" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> <strong>智能决策：从“拍板”到“算法”的跃迁</strong><a href="产品分析能力.html#智能决策从拍板到算法的跃迁" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="智能决策的意义" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> <strong>智能决策的意义</strong><a href="产品分析能力.html#智能决策的意义" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>智能决策的本质是：在面对复杂问题时，借助人工智能模型和算法，基于数据做出高效、精准的决策。这种方式与传统的“非智能决策”有着显著区别。</p>
+<p>非智能决策主要依赖于决策者的主观判断，其结果往往具有较大的偶然性和不可复制性。虽然在数据较少、问题简单的场景下，非智能决策可能依然有效，但在现代互联网和人工智能产品中，数据量大、选择复杂的特性让非智能决策逐渐力不从心。</p>
+</div>
+<div id="智能决策的应用场景" class="section level3 hasAnchor" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> <strong>智能决策的应用场景</strong><a href="产品分析能力.html#智能决策的应用场景" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>以电子商务为例，智能决策不仅仅用于推荐系统，还可以应用在界面设计、用户分群等多个领域。例如：</p>
+<ol style="list-style-type: decimal">
+<li><strong>推荐系统</strong>：根据用户行为数据实时推荐商品；</li>
+<li><strong>界面设计</strong>：通过A/B测试和用户反馈优化不同人群的界面体验；</li>
+<li><strong>用户分群</strong>：利用聚类算法实现精准营销。</li>
+</ol>
+<p>智能决策的核心是，将高复杂度、数据密集型的任务交给人工智能模型，让产品的迭代更加高效。</p>
+<hr />
+</div>
+</div>
+<div id="案例分析从垃圾邮件检测到产品智能化" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> <strong>案例分析：从垃圾邮件检测到产品智能化</strong><a href="产品分析能力.html#案例分析从垃圾邮件检测到产品智能化" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>为了更直观地理解智能决策与数据驱动的结合，我们可以通过垃圾邮件检测系统的例子来说明线上和线下的分工。</p>
+<div id="线下计算" class="section level3 hasAnchor" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> <strong>线下计算</strong><a href="产品分析能力.html#线下计算" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>在线下环境中：</p>
+<ul>
+<li><strong>数据收集</strong>：收集大量垃圾邮件和非垃圾邮件的数据；</li>
+<li><strong>模型训练</strong>：训练逻辑回归分类器；</li>
+<li><strong>特征生成</strong>：从邮件内容中提取关键特征。</li>
+</ul>
+<p>线下计算为线上系统提供了强大的支撑。</p>
+</div>
+<div id="线上决策" class="section level3 hasAnchor" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> <strong>线上决策</strong><a href="产品分析能力.html#线上决策" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>在线上环境中：</p>
+<ul>
+<li><strong>模型推断</strong>：利用已训练好的模型对新邮件进行分类；</li>
+<li><strong>实时反馈</strong>：在用户查看邮件时快速判断其是否为垃圾邮件。</li>
+</ul>
+<p>这种线上与线下的分工不仅提高了效率，还为系统扩展性提供了保障。</p>
+<hr />
+</div>
+</div>
+<div id="总结人工智能工程师与数据科学家的高阶能力" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> <strong>总结：人工智能工程师与数据科学家的高阶能力</strong><a href="产品分析能力.html#总结人工智能工程师与数据科学家的高阶能力" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>作为人工智能工程师和数据科学家，仅仅掌握算法和模型是不够的。真正的高阶能力在于：</p>
+<ol style="list-style-type: decimal">
+<li><strong>产品分析能力</strong>：能够识别产品中的数据驱动需求和智能决策机会；</li>
+<li><strong>系统性思维</strong>：从全局角度理解数据管道、线上与线下分工等关键环节；</li>
+<li><strong>持续优化能力</strong>：在数据驱动和智能决策的基础上不断提升产品表现。</li>
+</ol>
+<p>这些能力让人工智能技术不仅成为产品的辅助工具，更能引领产品进化、驱动创新。这种思维的培养需要时间，但一旦具备，就能让你在人工智能领域走得更远。</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="关于人工智能中的系统性思维.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="评估产品.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-cross-refs.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
